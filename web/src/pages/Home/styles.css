@@ -1,0 +1,38 @@
+.page-login {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "first second"
+    "first second"
+    "first second";
+}
+
+.block {
+    grid-area: first;
+    color: var(--color-text-in-primary);
+    background: var(--color-primary);
+    background-image: url('../../assets/images/success-background.svg');
+}
+
+.first-area {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.second-area {
+    grid-area: second;
+    background: var(--color-background);
+    color: var(--color-text-complement);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
