@@ -49,7 +49,7 @@ export default function TeacherForm(){
        try{
             await api.post('classes', data)
             alert('Cadastro realizado com sucesso')
-            history.push('/')
+            history.push('/landing')
         }
        catch(err){
            alert('Erro no cadastro!')

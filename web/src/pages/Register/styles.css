@@ -1,0 +1,130 @@
+.page-register {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "first second"
+    "first second"
+    "first second" !important;
+}
+
+.page-register .areaImg {
+    grid-area: second;
+    color: var(--color-text-in-primary);
+    background: var(--color-primary);
+    background-image: url('../../assets/images/success-background.svg');
+}
+
+.page-register .first-area {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.page-register .second-area {
+    grid-area: first;
+    background: var(--color-background);
+    color: var(--color-text-complement);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-register .login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-register .login h1 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 4rem;
+    color: var(--color-text-title);
+}
+
+.page-register .login input{
+    padding: 20px;
+}
+
+.page-register .login .password {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.page-register .login button {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: Archivo;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.page-register .login button:hover{
+    background-color: #dcdcf5;
+}
+
+.page-register .login .password img {
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    cursor: pointer;
+}
+
+.page-register .info {
+    position: absolute;
+    bottom: 3em;
+    display: flex;
+    justify-content: flex-start;
+    width: 19.4%;
+}
+
+.page-register div.info > p{
+    margin-left: 12em;
+    font: 400 12px Poppins;
+}
+
+.page-register .info .top a {
+    color: #8257E5;
+    font-weight: 600;
+}
+
+.page-register .info p img {
+    margin-left: 0.5em;
+}
+
+.page-register .login .line {
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.page-register .login .line p:nth-of-type(1){
+    margin-left: 10px;
+}
+
+.page-register .login .line p + p {
+    width: 65%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.page-register .login .line p > a {
+    text-decoration: none;
+    color: #9C98A6;
+}
