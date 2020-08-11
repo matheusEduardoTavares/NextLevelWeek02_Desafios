@@ -7,7 +7,7 @@ import passwordImg from '../../assets/images/icons/password.svg'
 import passwordOpenImg from '../../assets/images/icons/passwordOpen.svg'
 import backIcon from '../../assets/images/icons/back.svg'
 
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 
 export default function Login(){
     const history = useHistory()
@@ -43,7 +43,7 @@ export default function Login(){
             </div>
 
             <div className="second-area">
-                <img src={backIcon} alt="Voltar" />
+                <Link to='/'><img src={backIcon} alt="Voltar" /></Link>
                 <form onSubmit={handleLogin}>
                     <div className="login">
                         <div className="name">

@@ -38,7 +38,7 @@
 }
 
 @media (max-width: 499px){
-    .page-register .second-area > img {
+    .page-register .second-area > a > img {
         position: absolute;
         top: 1em;
         left: 4vw;
@@ -46,7 +46,7 @@
 }
 
 @media (min-width: 500px){
-    .page-register .second-area > img {
+    .page-register .second-area > a > img {
         position: absolute;
         top: 1em;
         left: 5vw;
@@ -54,7 +54,7 @@
 }
 
 @media (min-width: 1000px){
-    .page-register .second-area > img {
+    .page-register .second-area > a > img {
         position: absolute;
         top: 1em;
         left: 8vw;
@@ -62,7 +62,7 @@
 }
 
 @media (min-width: 1200px){
-    .page-register .second-area > img {
+    .page-register .second-area > a > img {
         position: absolute;
         top: 1em;
         left: 10vw;
@@ -70,7 +70,7 @@
 }
 
 @media (min-width: 1400px){
-    .page-register .second-area > img {
+    .page-register .second-area > a > img {
         position: absolute;
         top: 1em;
         left: 11vw;
@@ -78,7 +78,7 @@
 }
 
 @media (min-width: 1600px){
-    .page-register .second-area > img {
+    .page-register .second-area > a > img {
         position: absolute;
         top: 1em;
         left: 12vw;
@@ -86,7 +86,7 @@
 }
 
 @media (min-width: 1800px){
-    .page-register .second-area > img {
+    .page-register .second-area > a > img {
         position: absolute;
         top: 1em;
         left: 14vw;
@@ -94,7 +94,7 @@
 }
 
 @media (min-width: 1900px){
-    .page-register .second-area > img {
+    .page-register .second-area > a > img {
         position: absolute;
         top: 1em;
         left: 15.4vw;

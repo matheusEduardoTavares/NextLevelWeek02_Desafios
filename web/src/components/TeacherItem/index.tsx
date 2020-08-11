@@ -44,7 +44,7 @@ const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
                 <p>
                     Preço/hora <strong>{teacher.cost.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>
                 </p>
-                <a target="_blank" onClick={createNewConnection} href={`https://wa.me/${teacher.whatsapp}`}>
+                <a target="_blank" rel="noopener noreferrer" onClick={createNewConnection} href={`https://wa.me/${teacher.whatsapp}`}>
                     <img src={whatsappIcon} alt="Whatsapp"/>
                     Entrar em contato
                 </a>

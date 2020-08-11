@@ -81,7 +81,7 @@ export default function Login(){
                 <div className="info">
                     <div className="top">
                         <p>Não tem conta? </p>
-                        <a href="/">Cadastre-se</a>   
+                        <Link to="/register">Cadastre-se</Link>   
                     </div>
                     <p>É de graça <img src={purpleHeartIcon} alt="" /></p>
                 </div>
