@@ -29,7 +29,7 @@ export default function Login(){
     function handleLogin(e: FormEvent){
         e.preventDefault()
         if (submit){
-            history.push('/')
+            history.push('/successregister')
         }
     }
 
@@ -52,7 +52,10 @@ export default function Login(){
                             <input type="text" placeholder="Nome" 
                             value={name}
                             onChange={e => {
-                                (e.target.value.length >= 1 && password.length >= 6 && lastName.length >= 1 && email.length >= 4) ? setSubmit(true) : setSubmit(false)
+                                // eslint-disable-next-line
+                                const validateEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                                const confirm = validateEmail.test(String(email).toLowerCase());
+                                (e.target.value.length >= 1 && password.length >= 6 && lastName.length >= 1 && email.length >= 4 && confirm) ? setSubmit(true) : setSubmit(false)
                                 setName(e.target.value) 
                             }}
                             />
@@ -61,7 +64,10 @@ export default function Login(){
                             <input type="text" placeholder="Sobrenome" 
                             value={lastName}
                             onChange={e => {
-                                (e.target.value.length >= 1 && password.length >= 6 && name.length >= 1 && email.length >= 4) ? setSubmit(true) : setSubmit(false)
+                                // eslint-disable-next-line
+                                const validateEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                                const confirm = validateEmail.test(String(email).toLowerCase());
+                                (e.target.value.length >= 1 && password.length >= 6 && name.length >= 1 && email.length >= 4 && confirm) ? setSubmit(true) : setSubmit(false)
                                 setLastName(e.target.value) 
                             }}
                             />
@@ -82,7 +88,10 @@ export default function Login(){
                             <input type={type} placeholder="Senha" 
                             value={password}
                             onChange={e => {
-                                (e.target.value.length >= 6 && name.length >= 1 && lastName.length >= 1 && email.length >= 4) ? setSubmit(true) : setSubmit(false)
+                                // eslint-disable-next-line
+                                const validateEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                                const confirm = validateEmail.test(String(email).toLowerCase());
+                                (e.target.value.length >= 6 && name.length >= 1 && lastName.length >= 1 && email.length >= 4 && confirm) ? setSubmit(true) : setSubmit(false)
                                 setPassword(e.target.value)             
                             }}
                                 

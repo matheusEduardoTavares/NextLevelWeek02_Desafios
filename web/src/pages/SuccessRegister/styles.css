@@ -1,0 +1,50 @@
+#page-successRegister {
+    height: 100%;
+    width: 100%;
+    background: var(--color-primary);
+    background-image: url('../../assets/images/success-background.svg');
+}
+
+#page-successRegister .content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#page-successRegister img{
+    margin-bottom: 3rem;
+}
+
+#page-successRegister h1 {
+    color: #fff;
+    font: 700 54px Archivo;
+    margin-bottom: 3rem;
+}
+
+#page-successRegister p {
+    color: #D4C2FF;
+    font: 400 16px Poppins;
+    margin-bottom: 8rem;
+    text-align: center;
+}
+
+#page-successRegister .content a {
+    margin: 20px 0;
+    padding: 20px 40px;
+    border-radius: 5px;
+    font-family: Archivo;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #04D361;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+#page-successRegister .content a:hover{
+    background-color: var(--color-secundary-dark);
+}
