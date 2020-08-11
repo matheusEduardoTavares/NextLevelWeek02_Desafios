@@ -5,6 +5,7 @@ import './styles.css'
 import logoImg from '../../assets/images/logo.svg'
 import passwordImg from '../../assets/images/icons/password.svg'
 import passwordOpenImg from '../../assets/images/icons/passwordOpen.svg'
+import backIcon from '../../assets/images/icons/back.svg'
 
 import { useHistory } from 'react-router-dom'
 
@@ -42,10 +43,12 @@ export default function Login(){
             </div>
 
             <div className="second-area">
+                <img src={backIcon} alt="Voltar" />
                 <form onSubmit={handleLogin}>
                     <div className="login">
                         <div className="name">
                             <h1>Cadastro</h1>
+                            <p>Preencha os dados abaixo <br /> para começar</p>
                             <input type="text" placeholder="Nome" 
                             value={name}
                             onChange={e => {
@@ -83,7 +86,7 @@ export default function Login(){
                             />
                             <img src={image} alt="password" onClick={handlePassword}/>
                         </div>
-                        <button title={submit ? '' : "E-mail deve conter mais de 3 caracteres e senha deve conter mais de 5 caracteres"} style={{background: submit ? '#04D361' : '#dcdce5', color: submit ? 'white' : '#9C98A6', cursor: submit ? 'pointer' : 'auto'}}>Entrar</button>
+                        <button title={submit ? '' : "E-mail deve conter mais de 3 caracteres, senha deve conter mais de 5 caracteres, nome e sobrenome devem ter pelo menos 1 caractere"} style={{background: submit ? '#04D361' : '#dcdce5', color: submit ? 'white' : '#9C98A6', cursor: submit ? 'pointer' : 'auto'}}>Entrar</button>
                     </div>
                 </form>
             </div>
