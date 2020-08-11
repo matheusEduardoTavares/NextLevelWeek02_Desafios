@@ -14,6 +14,10 @@ export default function Login(){
     const [type, setType] = useState('password')
     const [submit, setSubmit] = useState(false)
 
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [checkbox, setCheckbox] = useState('')
+
     function handlePassword(){
         setImage(value => (value === passwordImg) ? passwordOpenImg : passwordImg)
         setType(value => (value === 'password') ? 'text' : 'password')
@@ -21,7 +25,9 @@ export default function Login(){
 
     function handleLogin(e: FormEvent){
         e.preventDefault()
-        console.log('oi')
+        if (submit){
+            console.log('oi')
+        }
     }
 
     return (
@@ -37,13 +43,29 @@ export default function Login(){
                 <form onSubmit={handleLogin}>
                     <div className="login">
                         <h1>Fazer Login</h1>
-                        <input type="email" placeholder="E-mail" />
+                        <input type="email" placeholder="E-mail" 
+                        value={email}
+                        onChange={e => {
+                            (e.target.value.length >= 6 && password.length >= 6) ? setSubmit(true) : setSubmit(false)
+                            setEmail(e.target.value) 
+                        }}
+                        />
                         <div className="password">
-                            <input type={type} placeholder="Senha" />
+                            <input type={type} placeholder="Senha" 
+                            value={password}
+                            onChange={e => {
+                                (email.length >= 6 && e.target.value.length >= 6) ? setSubmit(true) : setSubmit(false)
+                                setPassword(e.target.value)             
+                            }}
+                                
+                            />
                             <img src={image} alt="password" onClick={handlePassword}/>
                         </div>
                         <div className="line">
-                            <input type="checkbox" />
+                            <input type="checkbox" 
+                            value={checkbox}
+                            onChange={e => setCheckbox(e.target.value)}
+                            />
                             <p>Lembrar-me</p>
                             <p>
                             <Link to="/register">
@@ -51,7 +73,7 @@ export default function Login(){
                             </Link>
                             </p>
                         </div>
-                        <button style={{background: submit ? '#04D361' : '#dcdce5', color: submit ? 'white' : '#9C98A6'}}>Entrar</button>
+                        <button title={submit ? '' : "E-mail e senha devem conter mais de 6 caracteres cada um"} style={{background: submit ? '#04D361' : '#dcdce5', color: submit ? 'white' : '#9C98A6', cursor: submit ? 'pointer' : 'auto'}}>Entrar</button>
                     </div>
                 </form>
                 <div className="info">
