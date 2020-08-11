@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import './styles.css'
 
 import logoImg from '../../assets/images/logo.svg'
+import passwordImg from '../../assets/images/icons/password.svg'
 
 export default function Login(){
+    let [clicked, setClicked] = useState(false)
+    let [color, setColor] = useState('black')
+
+    function handlePassword(){
+        setClicked(value => !value)
+        setColor(value => (value === 'black')? 'green' : 'black')
+    }
+
     return (
         <div className="page-login">
             <div className="block">
@@ -18,7 +27,10 @@ export default function Login(){
                 <div className="login">
                     <h1>Fazer Login</h1>
                     <input type="text" placeholder="E-mail" />
-                    <input type="password" placeholder="Senha" />
+                    <div className="password">
+                        <input type="password" placeholder="Senha" />
+                        <img src={passwordImg} alt="password" onClick={handlePassword} style={{color:color}}/>
+                    </div>
                     <div className="line">
                         <input type="checkbox" />
                         <p>Lembrar-me</p>
