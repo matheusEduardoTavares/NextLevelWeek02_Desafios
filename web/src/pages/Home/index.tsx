@@ -73,7 +73,7 @@ export default function Login(){
                             />
                             <p>Lembrar-me</p>
                             <p>
-                            <Link to="/register">
+                            <Link to="/passwordforgot">
                             Esqueci minha senha
                             </Link>
                             </p>

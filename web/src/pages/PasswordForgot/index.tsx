@@ -17,7 +17,7 @@ export default function Login(){
     function handleLogin(e: FormEvent){
         e.preventDefault()
         if (submit){
-            history.push('/')
+            history.push('/success')
         }
     }
 

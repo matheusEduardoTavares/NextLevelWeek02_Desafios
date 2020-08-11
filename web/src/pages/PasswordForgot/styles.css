@@ -97,7 +97,7 @@
     .page-passwordForgot .second-area > a > img {
         position: absolute;
         top: 1em;
-        left: 15.4vw;
+        left: 12.4vw;
     }
 }
 
@@ -121,7 +121,7 @@
     padding: 20px;
 }
 
-.page-passwordForgot .second-area .login button {
+.page-passwordForgot .second-area .login #button {
     margin: 20px 0;
     padding: 20px;
     border-radius: 5px;
@@ -134,7 +134,7 @@
     max-width: 375px;
 }
 
-.page-passwordForgot .login button:hover{
+.page-passwordForgot .login #button:hover{
     background-color: #dcdcf5;
 }
 
