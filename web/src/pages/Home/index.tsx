@@ -48,7 +48,10 @@ export default function Login(){
                         <input type="email" placeholder="E-mail" 
                         value={email}
                         onChange={e => {
-                            (e.target.value.length >= 4 && password.length >= 6) ? setSubmit(true) : setSubmit(false)
+                            // eslint-disable-next-line
+                            const validateEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                            const confirm = validateEmail.test(String(e.target.value).toLowerCase());
+                            (e.target.value.length >= 4 && password.length >= 6 && confirm) ? setSubmit(true) : setSubmit(false)
                             setEmail(e.target.value) 
                         }}
                         />

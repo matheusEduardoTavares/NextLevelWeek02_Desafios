@@ -1,0 +1,145 @@
+.page-passwordForgot {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "first second"
+    "first second"
+    "first second" !important;
+}
+
+.page-passwordForgot .areaImg {
+    grid-area: second;
+    color: var(--color-text-in-primary);
+    background: var(--color-primary);
+    background-image: url('../../assets/images/success-background.svg');
+}
+
+.page-passwordForgot .first-area {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.page-passwordForgot .second-area {
+    grid-area: first;
+    background: var(--color-background);
+    color: var(--color-text-complement);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 499px){
+    .page-passwordForgot .second-area > a > img {
+        position: absolute;
+        top: 1em;
+        left: 4vw;
+    }
+}
+
+@media (min-width: 500px){
+    .page-passwordForgot .second-area > a > img {
+        position: absolute;
+        top: 1em;
+        left: 5vw;
+    }
+}
+
+@media (min-width: 1000px){
+    .page-passwordForgot .second-area > a > img {
+        position: absolute;
+        top: 1em;
+        left: 8vw;
+    }
+}
+
+@media (min-width: 1200px){
+    .page-passwordForgot .second-area > a > img {
+        position: absolute;
+        top: 1em;
+        left: 10vw;
+    }
+}
+
+@media (min-width: 1400px){
+    .page-passwordForgot .second-area > a > img {
+        position: absolute;
+        top: 1em;
+        left: 11vw;
+    }
+}
+
+@media (min-width: 1600px){
+    .page-passwordForgot .second-area > a > img {
+        position: absolute;
+        top: 1em;
+        left: 12vw;
+    }
+}
+
+@media (min-width: 1800px){
+    .page-passwordForgot .second-area > a > img {
+        position: absolute;
+        top: 1em;
+        left: 14vw;
+    }
+}
+
+@media (min-width: 1900px){
+    .page-passwordForgot .second-area > a > img {
+        position: absolute;
+        top: 1em;
+        left: 15.4vw;
+    }
+}
+
+.page-passwordForgot .login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-passwordForgot .login h1 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 4rem;
+    color: var(--color-text-title);
+}
+
+.page-passwordForgot .login input{
+    padding: 20px;
+}
+
+.page-passwordForgot .second-area .login button {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: Archivo;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    max-width: 375px;
+}
+
+.page-passwordForgot .login button:hover{
+    background-color: #dcdcf5;
+}
+
+.page-passwordForgot .second-area .login > p {
+    font: 400 16px Poppins;
+    margin: -1em 0 3em;
+    color: var(--color-text-base);
+}
