@@ -44,6 +44,8 @@ export default class ClassesController {
     async create(request: Request, response: Response) {
         const {
             name,
+            lastname,
+            password,
             avatar,
             whatsapp,
             bio,
@@ -57,6 +59,8 @@ export default class ClassesController {
         try{
             const insertedUsersIds = await trx('users').insert({
                 name,
+                lastname,
+                password,
                 avatar,
                 whatsapp,
                 bio

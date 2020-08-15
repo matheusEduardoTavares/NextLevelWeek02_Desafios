@@ -1,6 +1,6 @@
 import connection from '../database/connection'
 import { Request, Response } from 'express'
-import Knex from 'knex'
+// import bcrypt from 'bcrypt'
 
 interface scheduleItem extends Array<any> {
     week_day: number,
@@ -52,11 +52,6 @@ export default class Proffy {
                 })
             })
         })
-            
-
-
-        
-
 
         return response.json({
             id,
@@ -65,7 +60,13 @@ export default class Proffy {
             cost,
             schedule
         })
-    } 
+    }
+
+    async create (request: Request, response: Response) {
+        const { name, lastname, email, password } = request.body
+
+        
+    }
 }
 
 // await connection('classes').join('users', 'users', '=', 'classes.user_id')
