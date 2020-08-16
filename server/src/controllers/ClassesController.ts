@@ -47,6 +47,7 @@ export default class ClassesController {
             name,
             lastname,
             password,
+            email,
             avatar,
             whatsapp,
             bio,
@@ -70,6 +71,7 @@ export default class ClassesController {
                     name,
                     lastname,
                     password: hash,
+                    email,
                     avatar,
                     whatsapp,
                     bio
