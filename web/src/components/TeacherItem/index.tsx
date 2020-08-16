@@ -5,6 +5,8 @@ import './styles.css'
 import whatsappIcon from '../../assets/images/icons/whatsapp.svg'
 import api from '../../services/api'
 
+import userDefault from '../../assets/images/user.png'
+
 export interface Teacher {
     id: number;
     avatar: string;
@@ -29,7 +31,7 @@ const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
     return (
         <article className="teacher-item">
             <header>
-                <img src={teacher.avatar} alt={teacher.name}/>
+                <img src={teacher.avatar.length > 0 ? teacher.avatar : userDefault} alt={teacher.name}/>
                 <div>
                     <strong>{teacher.name}</strong>
                     <span>{teacher.subject}</span>

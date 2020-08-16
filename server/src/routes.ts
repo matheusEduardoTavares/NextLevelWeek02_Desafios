@@ -17,5 +17,6 @@ routes.post('/connections', connectionsController.create)
 routes.get('/connections', connectionsController.index)
 
 routes.put('/proffys', proffyController.update)
+routes.post('/proffys', proffyController.create)
 
 export default routes

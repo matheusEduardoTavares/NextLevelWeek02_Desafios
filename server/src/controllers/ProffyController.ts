@@ -74,7 +74,30 @@ export default class Proffy {
     async create (request: Request, response: Response) {
         const { name, lastname, password, email } = request.body
 
-        
+        try{
+            const db = await connection.transaction()
+
+            bcrypt.hash(password, 10, async (err, hash) => {
+                if (err) throw new Error(err.toString())
+
+                const [id] = await db('users').insert({
+                    name,
+                    lastname,
+                    password: hash,
+                    email,
+                    avatar: '',
+                    whatsapp: '',
+                    bio: ''
+                })
+
+                await db.commit()
+
+                return response.status(201).json({ id })
+            })
+        }
+        catch (err) {
+            return response.status(500).json({error: err})
+        }
     }
 }
 
